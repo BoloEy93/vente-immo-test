@@ -1,31 +1,31 @@
-# Real Estate NFT DApp
+# Application de Vente de Biens Immobilier
 
-## Technology Stack & Tools
+## Outils et Technologies utilisées
 
-- Solidity (Writing Smart Contracts & Tests)
-- Javascript (React & Testing)
-- [Hardhat](https://hardhat.org/) (Development Framework)
-- [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
-- [React.js](https://reactjs.org/) (Frontend Framework)
+- Solidity (Ecriture des Contrats Intelligents & Tests)
+- Javascript (React & Tests)
+- [Hardhat](https://hardhat.org/) (Framework de Developpement )
+- [Ethers.js](https://docs.ethers.io/v5/) (Interactions Blockchain)
+- [React.js](https://reactjs.org/) (Framework FrontEnd)
 
-## Requirements For Initial Setup
+## Conditions requises pour la configuration initiale
 - Install [NodeJS](https://nodejs.org/en/)
 
-## Setting Up
-### 1. Clone/Download the Repository
+## Configuration
+### 1. Cloner/Telecharger le Depot
 
-### 2. Install Dependencies:
+### 2. Installation des Dependances:
 `$ npm install`
 
-### 3. Run tests
+### 3. Execution des tests
 `$ npx hardhat test`
 
-### 4. Start Hardhat node
+### 4. Demarrage noeud Hardhat
 `$ npx hardhat node`
 
-### 5. Run deployment script
-In a separate terminal execute:
+### 5. Exécuter le script de déploiement
+Dans un terminal (invite de commandes) distinct executer:
 `$ npx hardhat run ./scripts/deploy.js --network localhost`
 
-### 7. Start frontend
+### 7. Démarrer l'interface Utilisateur
 `$ npm run start`
