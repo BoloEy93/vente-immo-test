@@ -123,6 +123,7 @@ header {
 .header__search {
   padding: 25px;
   min-width: 40%;
+  margin: 25%; 
 
   position: absolute;
   top: 45%;
