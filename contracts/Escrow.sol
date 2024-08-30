@@ -1,6 +1,8 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
+// interface pour le transfert de'un compte ETH à un autre
+
 interface IERC721 {
     function transferFrom(
         address _from,
@@ -9,24 +11,25 @@ interface IERC721 {
     ) external;
 }
 
+// definition d'un contrat Bien Immobilier
 contract Escrow {
-    address public nftAddress;
-    address payable public seller;
-    address public inspector;
-    address public lender;
+    address public nftAddress;           // adresse du contrat
+    address payable public seller;       // adresse vendeur
+    address public inspector;            // adresse notaire
+    address public lender;               // adresse de l'intermediaire / agence
 
     modifier onlyBuyer(uint256 _nftID) {
-        require(msg.sender == buyer[_nftID], "Only buyer can call this method");
+        require(msg.sender == buyer[_nftID], "Seul l acheteur peut appeler cette methode");
         _;
     }
 
     modifier onlySeller() {
-        require(msg.sender == seller, "Only seller can call this method");
+        require(msg.sender == seller, "Seul le vendeur peut appeler cette methode");
         _;
     }
 
     modifier onlyInspector() {
-        require(msg.sender == inspector, "Only inspector can call this method");
+        require(msg.sender == inspector, "Seul le notaire peut appeler cette methode");
         _;
     }
 
@@ -64,12 +67,12 @@ contract Escrow {
         buyer[_nftID] = _buyer;
     }
 
-    // Put Under Contract (only buyer - payable escrow)
+    // Mettre sous Contrat (only buyer - payable escrow)
     function depositEarnest(uint256 _nftID) public payable onlyBuyer(_nftID) {
         require(msg.value >= escrowAmount[_nftID]);
     }
 
-    // Update Inspection Status (only inspector)
+    // Mise à jour Avis du Notaire (Seul le notaire)
     function updateInspectionStatus(uint256 _nftID, bool _passed)
         public
         onlyInspector
@@ -77,12 +80,12 @@ contract Escrow {
         inspectionPassed[_nftID] = _passed;
     }
 
-    // Approve Sale
+    // Approbation de vente
     function approveSale(uint256 _nftID) public {
         approval[_nftID][msg.sender] = true;
     }
 
-    // Finalize Sale
+    // Finalisation de vente
     // -> Require inspection status (add more items here, like appraisal)
     // -> Require sale to be authorized
     // -> Require funds to be correct amount
@@ -105,8 +108,8 @@ contract Escrow {
         IERC721(nftAddress).transferFrom(address(this), buyer[_nftID], _nftID);
     }
 
-    // Cancel Sale (handle earnest deposit)
-    // -> if inspection status is not approved, then refund, otherwise send to seller
+    // Annulation de vente (handle earnest deposit)
+    // -> En cas d'Avis defavorable du notaire renvoyer les fonds, sinon vendre
     function cancelSale(uint256 _nftID) public {
         if (inspectionPassed[_nftID] == false) {
             payable(buyer[_nftID]).transfer(address(this).balance);
