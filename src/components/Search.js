@@ -2,6 +2,7 @@ const Search = () => {
     return (
         <header>
             <h2 className="header__title">Cherche, Explore et Achetes !</h2>
+            <hr>
             <input
                 type="text"
                 className="header__search"
