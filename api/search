@@ -1,0 +1,9 @@
+app.get('/api/search', async (req, res) => {
+  const { query } = req.query;
+  try {
+    const properties = await Property.find({ name: new RegExp(query, 'i') });
+    res.json(properties);
+  } catch (error) {
+    res.status(500).json({ error: 'Error fetching search results' });
+  }
+});
