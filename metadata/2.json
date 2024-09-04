@@ -6,27 +6,27 @@
     "id": "2",
     "attributes": [
         {
-            "trait_type": "Purchase Price",
+            "trait_type": "Prix de Vente",
             "value": 15
         },
         {
-            "trait_type": "Type of Residence",
-            "value": "Single family residence"
+            "trait_type": "Type de Residence",
+            "value": "Residence Famille Unique"
         },
         {
-            "trait_type": "Bed Rooms",
+            "trait_type": "Chambres",
             "value": 4
         },
         {
-            "trait_type": "Bathrooms",
+            "trait_type": "Salles de Bains",
             "value": 4
         },
         {
-            "trait_type": "Square Feet",
+            "trait_type": "Superficie",
             "value": 3979
         },
         {
-            "trait_type": "Year Built",
+            "trait_type": "Annee Construction",
             "value": 1980
         }
     ]
