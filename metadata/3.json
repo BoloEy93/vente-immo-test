@@ -6,27 +6,27 @@
     "id": "3",
     "attributes": [
         {
-            "trait_type": "Purchase Price",
+            "trait_type": "Prix Vente",
             "value": 10
         },
         {
-            "trait_type": "Type of Residence",
-            "value": "Single family residence"
+            "trait_type": "Type de Residence",
+            "value": "Residence Famille Unique"
         },
         {
-            "trait_type": "Bed Rooms",
+            "trait_type": "Chambre",
             "value": 3
         },
         {
-            "trait_type": "Bathrooms",
+            "trait_type": "Salle de Bains",
             "value": 3
         },
         {
-            "trait_type": "Square Feet",
+            "trait_type": "Superficie",
             "value": 2202
         },
         {
-            "trait_type": "Year Built",
+            "trait_type": "Annee Construction",
             "value": 2020
         }
     ]
