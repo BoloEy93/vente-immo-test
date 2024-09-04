@@ -124,9 +124,9 @@ const Home = ({ home, provider, account, escrow, togglePop }) => {
                 <div className="home__overview">
                     <h1>{home.name}</h1>
                     <p>
-                        <strong>{home.attributes[2].value}</strong> bds |
-                        <strong>{home.attributes[3].value}</strong> ba |
-                        <strong>{home.attributes[4].value}</strong> sqft
+                        <strong>{home.attributes[2].value}</strong> cbr |
+                        <strong>{home.attributes[3].value}</strong> sb |
+                        <strong>{home.attributes[4].value}</strong> m2
                     </p>
                     <p>{home.address}</p>
 
