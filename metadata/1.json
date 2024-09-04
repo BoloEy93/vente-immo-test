@@ -6,27 +6,27 @@
     "id": "1",
     "attributes": [
         {
-            "trait_type": "Purchase Price",
+            "trait_type": "Prix d'achat",
             "value": 20
         },
         {
-            "trait_type": "Type of Residence",
+            "trait_type": "Type de Residence",
             "value": "Condo"
         },
         {
-            "trait_type": "Bed Rooms",
+            "trait_type": "Chambres",
             "value": 2
         },
         {
-            "trait_type": "Bathrooms",
+            "trait_type": "Salle de Bains",
             "value": 3
         },
         {
-            "trait_type": "Square Feet",
+            "trait_type": "Superficie",
             "value": 2200
         },
         {
-            "trait_type": "Year Built",
+            "trait_type": "Annee Construction",
             "value": 2013
         }
     ]
